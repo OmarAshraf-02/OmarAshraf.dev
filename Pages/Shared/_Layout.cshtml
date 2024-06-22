@@ -61,10 +61,20 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
 
     <script>
-        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-            return new bootstrap.Tooltip(tooltipTriggerEl)
-        })
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialize tooltips
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl);
+            });
+
+            tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+                tooltipTriggerEl.addEventListener('focusin', function () {
+                    var tooltip = bootstrap.Tooltip.getInstance(tooltipTriggerEl);
+                    tooltip.hide();
+                });
+            });
+        });
     </script>
 
     @await RenderSectionAsync("Scripts", required: false)

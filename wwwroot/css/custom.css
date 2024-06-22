@@ -106,24 +106,40 @@ body, h1, h2, h3, h4, h5, h6, p {
 }
 
 .github-icon-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
     color: #f2cdcd;
     transition: color 0.2s ease-in-out;
+    width: auto;
 }
 
 .linkedin-icon-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
     color: #74c7ec;
     transition: color 0.2s ease-in-out;
+    width: auto;
 }
 
 .mail-icon-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
     color: #f9e2af;
     transition: color 0.2s ease-in-out;
+    width: auto;
 }
 
 .resume-icon-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
     text-decoration: none;
     color: #cdd6f4;
     transition: color 0.2s ease-in-out;
@@ -140,13 +156,14 @@ body, h1, h2, h3, h4, h5, h6, p {
     color: #cdd6f4;
     background-color: #181825;
     font-size: 1rem;
+    border: 2px solid #b4befe;
 }
 
 .tooltip.bs-tooltip-top .tooltip-arrow::before {
-      border-top-color: #1e1e2e !important;
+      border-top-color: #b4befe !important;
 	}
 .tooltip.bs-tooltip-bottom .tooltip-arrow::before {
-      border-bottom-color: #1e1e2e !important;
+      border-bottom-color: #b4befe !important;
     }
 .tooltip.bs-tooltip-start .tooltip-arrow::before {
       border-left-color: #1e1e2e !important;
