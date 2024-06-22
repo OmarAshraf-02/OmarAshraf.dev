@@ -39,12 +39,6 @@ body, h1, h2, h3, h4, h5, h6, p {
 }
 
 #projects{
-    color: #89dceb;
-    transition: color 0.3s ease-in-out;
-    animation: fadeIn 1.25s ease-in-out;
-}
-
-#contact{
     color: #94e2d5;
     transition: color 0.3s ease-in-out;
     animation: fadeIn 1.25s ease-in-out;
@@ -123,9 +117,45 @@ body, h1, h2, h3, h4, h5, h6, p {
     transition: color 0.2s ease-in-out;
 }
 
-.linkedin-icon-link:hover, .linkedin-icon-link:active, .github-icon-link:hover, .github-icon-link:active{
+.mail-icon-link {
+    text-decoration: none;
+    color: #f9e2af;
+    transition: color 0.2s ease-in-out;
+}
+
+.resume-icon-link {
+    text-decoration: none;
+    color: #cdd6f4;
+    transition: color 0.2s ease-in-out;
+}
+
+.linkedin-icon-link:hover, .linkedin-icon-link:active,
+.github-icon-link:hover, .github-icon-link:active,
+.mail-icon-link:hover, .mail-icon-link:active,
+.resume-icon-link:hover, .resume-icon-link:active{
     color: #cba6f7;
 }
+
+.tooltip-inner {
+    color: #cdd6f4;
+    background-color: #181825;
+    font-size: 1rem;
+}
+
+.tooltip.bs-tooltip-top .tooltip-arrow::before {
+      border-top-color: #1e1e2e !important;
+	}
+.tooltip.bs-tooltip-bottom .tooltip-arrow::before {
+      border-bottom-color: #1e1e2e !important;
+    }
+.tooltip.bs-tooltip-start .tooltip-arrow::before {
+      border-left-color: #1e1e2e !important;
+    }
+
+    .tooltip.bs-tooltip-end .tooltip-arrow::before {
+      border-right-color: #1e1e2e !important;
+}
+
 
 @keyframes typing {
   from {

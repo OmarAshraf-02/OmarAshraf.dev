@@ -37,9 +37,6 @@
                             <a class="nav-link" asp-area="" asp-page="/Projects" id="projects">Projects</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-page="/Contact" id="contact">Contact</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-page="/Blog" id="blog">Blog (Work In Progress)</a>
                         </li>
                     </ul>
@@ -62,6 +59,13 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    </script>
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>
