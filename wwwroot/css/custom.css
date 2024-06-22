@@ -1,0 +1,144 @@
+
+* {
+    font-family:'JetBrains Mono', monospace;
+}
+
+body {
+    background-color: #1e1e2e;
+}
+
+body, h1, h2, h3, h4, h5, h6, p {
+    color: #cdd6f4;
+}
+
+.navbar {
+    background-color: #181825;
+    width: 100%;
+}
+
+.navbar-brand, .navbar-brand:hover {
+    color: #cba6f7;
+    font-weight: bold;
+    letter-spacing: .05rem;
+}
+
+.navbar .container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23b4befe' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+#about{
+    color: #89b4fa;
+    transition: color 0.3s ease-in-out;
+}
+
+#projects{
+    color: #89dceb;
+    transition: color 0.3s ease-in-out;
+}
+
+#contact{
+    color: #94e2d5;
+    transition: color 0.3s ease-in-out;
+}
+
+#blog{
+    color: #f38ba8;
+    transition: color 0.3s ease-in-out;
+}
+
+#about:hover, #projects:hover, #contact:hover, #blog:hover{
+    color: #cba6f7;
+    text-decoration: underline;
+}
+
+.portrait{
+    width: 12.5rem;
+    border: 3px solid #181825;
+    margin-bottom: 20px;
+}
+
+.footer {
+    color: #f2cdcd;
+}
+
+.footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#index-container {
+    display: grid;
+    place-items: center;
+    margin-top: 7%;
+    font-size: 2rem;
+}
+
+.text {
+  width: 12ch;
+  animation: typing 1.5s steps(11), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #cdd6f4;
+  font-size: 2rem;
+  font-weight: 200;
+  color: #cba6f7;
+  margin-bottom: 0;
+}
+
+.fade-in {
+    animation: fadeIn 4s ease-in-out;
+}
+
+.title {
+    width: 19ch;
+    animation:fadeIn 4s ease-in-out, typing 2.5s, blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #a6adc8;
+}
+
+.github-icon-link {
+    text-decoration: none;
+    color: #f2cdcd;
+    transition: color 0.2s ease-in-out;
+}
+
+.linkedin-icon-link {
+    text-decoration: none;
+    color: #74c7ec;
+    transition: color 0.2s ease-in-out;
+}
+
+.linkedin-icon-link:hover, .linkedin-icon-link:active, .github-icon-link:hover, .github-icon-link:active{
+    color: #cba6f7;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
