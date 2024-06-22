@@ -20,6 +20,7 @@ body, h1, h2, h3, h4, h5, h6, p {
     color: #cba6f7;
     font-weight: bold;
     letter-spacing: .05rem;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 .navbar .container {
@@ -34,21 +35,25 @@ body, h1, h2, h3, h4, h5, h6, p {
 #about{
     color: #89b4fa;
     transition: color 0.3s ease-in-out;
+    animation: fadeIn 1.25s ease-in-out;
 }
 
 #projects{
     color: #89dceb;
     transition: color 0.3s ease-in-out;
+    animation: fadeIn 1.25s ease-in-out;
 }
 
 #contact{
     color: #94e2d5;
     transition: color 0.3s ease-in-out;
+    animation: fadeIn 1.25s ease-in-out;
 }
 
 #blog{
     color: #f38ba8;
     transition: color 0.3s ease-in-out;
+    animation: fadeIn 1.25s ease-in-out;
 }
 
 #about:hover, #projects:hover, #contact:hover, #blog:hover{
@@ -63,7 +68,7 @@ body, h1, h2, h3, h4, h5, h6, p {
 }
 
 .footer {
-    color: #f2cdcd;
+    color: #fab387;
 }
 
 .footer .container {
