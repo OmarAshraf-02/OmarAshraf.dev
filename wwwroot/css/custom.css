@@ -7,8 +7,14 @@ body {
     background-color: #1e1e2e;
 }
 
-body, h1, h2, h3, h4, h5, h6, p {
+body, h1, h2, h3, h4, h5, h6, p, span {
     color: #cdd6f4;
+}
+
+body::selection, h1::selection, h2::selection, h3::selection,
+h4::selection, h5::selection, h6::selection, p::selection, span::selection {
+    background-color: #cba6f7;
+    color: #1e1e2e;
 }
 
 .navbar {
@@ -16,11 +22,17 @@ body, h1, h2, h3, h4, h5, h6, p {
     width: 100%;
 }
 
-.navbar-brand, .navbar-brand:hover {
+.navbar-brand {
     color: #cba6f7;
     font-weight: bold;
-    letter-spacing: .05rem;
+    font-size: 1.5rem;
+    letter-spacing: .06rem;
     animation: fadeIn 1.5s ease-in-out;
+    transition: color 0.3s ease-in-out;
+}
+
+ .navbar-brand:hover {
+    color: #94e2d5;
 }
 
 .navbar .container {
@@ -34,18 +46,21 @@ body, h1, h2, h3, h4, h5, h6, p {
 
 #about{
     color: #89b4fa;
+    font-weight: bold;
     transition: color 0.3s ease-in-out;
     animation: fadeIn 1.25s ease-in-out;
 }
 
 #projects{
     color: #94e2d5;
+    font-weight: bold;
     transition: color 0.3s ease-in-out;
     animation: fadeIn 1.25s ease-in-out;
 }
 
 #blog{
-    color: #f38ba8;
+    color: #a6e3a1;
+    font-weight: bold;
     transition: color 0.3s ease-in-out;
     animation: fadeIn 1.25s ease-in-out;
 }
@@ -173,7 +188,6 @@ body, h1, h2, h3, h4, h5, h6, p {
       border-right-color: #1e1e2e !important;
 }
 
-
 @keyframes typing {
   from {
     width: 0
@@ -193,4 +207,49 @@ body, h1, h2, h3, h4, h5, h6, p {
     to {
         opacity: 1;
     }
+}
+
+.about-heading-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading-primary {
+    color: #89b4fa;
+    letter-spacing: 3px;
+}
+
+.heading-primary::after {
+    content: '';
+    display: block;
+    width: 25px;
+    height: 4px;
+    background-color: #94e2d5;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 2px;
+}
+
+.heading-secondary {
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.heading-secondary>b {
+    color: rgba(24, 24, 37, 0);
+}
+
+.heading-secondary>b::selection {
+    background-color: #cba6f7;
+    color: #1e1e2e;
+}
+
+.about-container {
+    display: flex;
+    justify-content:space-around;
+    flex-direction: row;
+    border: 2px solid red;
 }
