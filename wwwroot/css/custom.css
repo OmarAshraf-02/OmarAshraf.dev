@@ -303,6 +303,8 @@ footer, .footer {
     margin: 5px;
     color: #1e1e2e;
     transition: background-color 0.3s ease-in-out, font-size 0.2s ease-in-out;
+    white-space: normal; /* Allows text to wrap */
+    word-break: break-word; /* Breaks long words */
 }
 
 .badge:hover {
