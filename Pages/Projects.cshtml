@@ -1,4 +1,28 @@
 ﻿@page
 @model MyApp.Namespace.ProjectsModel
 @{
+    ViewData["Title"] = "Omar Ashraf";
 }
+
+<div class="about-heading-container">
+    <h1 class="heading-primary">PROJECTS</h1>
+    <span class="heading-secondary">
+        Here are some recent projects I've finished or am currently working on (more coming soon)<br>
+        <b>This easter egg is here for spacing, couldn't be bothered to do more CSS</b>
+    </span>
+</div>
+
+<div class="project-container" style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap">
+    <div class="card text-center"
+        style="width: 30rem; background-color: #181825; margin-right: 1rem; margin-bottom: 1rem">
+        <img src="~/images/HTTP Server.png" class="card-img-top" style="background-color: #181825;" alt="...">
+        <div class="card-body" style="background-color: #181825;">
+            <h5 class="card-title">HTTP Server</h5>
+            <p class="card-text">An HTTP server implementation built from scratch using C# and .NET</p>
+            <a href="https://github.com/OmarAshraf-02/HttpServer" target="_blank" class="btn btn-primary"
+                style="background-color: #94e2d5; color: #1e1e2e; border: none">Source
+                Code &
+                Documentation</a>
+        </div>
+    </div>
+</div>
