@@ -4,11 +4,6 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <EnableDefaultContentItems>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Content Include="Pages\**\*.*" CopyToOutputDirectory="PreserveNewest" />
-    <Content Include="Properties\**\*.*" CopyToOutputDirectory="PreserveNewest" />
-  </ItemGroup>
-
 </Project>
