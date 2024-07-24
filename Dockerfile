@@ -1,19 +1,20 @@
-# https://hub.docker.com/_/microsoft-dotnet
+# First stage: build
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /source
 
-# copy csproj and restore as distinct layers
-COPY *.sln .
-COPY *.csproj ./
+# Copy solution and project files to the build container
+COPY OmarAshraf.dev.sln .
+COPY OmarAshraf.dev.csproj ./
+
+# Restore dependencies
 RUN dotnet restore
 
-# copy everything else and build app
-COPY . ./
-WORKDIR /source
+# Copy the remaining source code and build the application
+COPY . .
 RUN dotnet publish -c release -o /app --no-restore
 
-# final stage/image
+# Final stage: runtime
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /app
 COPY --from=build /app ./
-ENTRYPOINT ["dotnet", "aspnetapp.dll"]
+ENTRYPOINT ["dotnet", "OmarAshraf.dev.dll"]
