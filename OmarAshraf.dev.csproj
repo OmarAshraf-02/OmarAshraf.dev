@@ -6,4 +6,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Include="wwwroot\**\*.*" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="Pages\**\*.*" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="Properties\**\*.*" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
 </Project>
